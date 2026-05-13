@@ -2152,8 +2152,10 @@
             card.style.transform = flipped ? 'rotateY(180deg)' : 'rotateY(0deg)';
         }
 
-        /* Click (desktop) */
+        /* Click (desktop only — skip if touch already handled it) */
+        let touchedRecently = false;
         cScene.addEventListener('click', e => {
+            if (touchedRecently) return;
             e.preventDefault();
             e.stopPropagation();
             doFlip();
@@ -2168,7 +2170,11 @@
         cScene.addEventListener('touchend', e => {
             const dx = Math.abs(e.changedTouches[0].clientX - touchStartX);
             const dy = Math.abs(e.changedTouches[0].clientY - touchStartY);
-            if (dx < 10 && dy < 10) doFlip(); /* only flip if it was a tap, not a swipe */
+            if (dx < 10 && dy < 10) {
+                touchedRecently = true;
+                doFlip();
+                setTimeout(() => { touchedRecently = false; }, 400);
+            }
         }, { passive: true });
 
         /* Hover tilt — only when not flipped, pure rotateY */
