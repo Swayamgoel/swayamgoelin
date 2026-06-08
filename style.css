@@ -1599,6 +1599,10 @@
                 padding: 100px 40px 60px;
             }
 
+            .blog-detail {
+                padding: 60px 40px 80px;
+            }
+
             .blog-grid {
                 margin-top: 40px;
             }
@@ -1610,7 +1614,7 @@
             }
 
             .blog-detail {
-                padding: 60px 0 80px;
+                padding: 60px 20px 80px;
             }
 
             .blog-card {
