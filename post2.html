@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Tips for New Brands</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/sg.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600&family=Libre+Baskerville:ital@1&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav id="nav">
+        <a href="index.html" class="n-logo">Swayam <em>Goel</em></a>
+        <ul class="n-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <a href="index.html#connect" class="n-cta">Let's Talk</a>
+        <div class="ham" id="ham" onclick="toggleNav()"><span></span><span></span><span></span></div>
+    </nav>
+
+    <div class="mob" id="mob">
+        <a href="index.html#about" onclick="closeNav()">About</a>
+        <a href="index.html#skills" onclick="closeNav()">Skills</a>
+        <a href="index.html#services" onclick="closeNav()">Services</a>
+        <a href="blog.html" onclick="closeNav()">Blog</a>
+        <a href="index.html#connect" onclick="closeNav()">Contact</a>
+    </div>
+
+    <section class="blog-detail sec-in">
+        <a class="back-link" href="blog.html"><i class="fa-solid fa-arrow-left"></i>Back to all posts</a>
+        <h1>SEO Tips for New Brands</h1>
+        <div class="blog-detail-meta">Coming soon · SEO · Marketing</div>
+        <img src="images/sg.png" alt="SEO tips" class="blog-image">
+        <div class="alt-message">
+            This post is being prepared and will be published soon. Check back later for practical SEO advice tailored to new websites.
+        </div>
+    </section>
+
+    <footer class="foot">
+        <div class="foot-in">
+            <div>
+                <div class="sec-lbl">Stay Connected</div>
+                <div class="foot-big">More Articles<br><em>Coming Soon.</em></div>
+                <p class="foot-p">Want to discuss a blog idea or feature? Reach out and let's turn your next article into a growth tool.</p>
+                <a href="mailto:swayamgoel4@gmail.com?subject=Blog%20Inquiry" class="btn-g">
+                    <span>Send an Email</span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                </a>
+            </div>
+            <div>
+                <div class="c-list">
+                    <div class="c-item">
+                        <div class="c-icon"><i class="fa-solid fa-phone"></i></div><a href="tel:+919464950467">+91 9464950467</a>
+                    </div>
+                    <div class="c-item">
+                        <div class="c-icon"><i class="fa-solid fa-envelope"></i></div><a href="mailto:swayamgoel4@gmail.com">swayamgoel4@gmail.com</a>
+                    </div>
+                    <div class="c-item">
+                        <div class="c-icon"><i class="fa-solid fa-globe"></i></div><a href="http://www.swayamgoel.in" target="_blank">www.swayamgoel.in</a>
+                    </div>
+                </div>
+                <div class="s-list">
+                    <a href="https://github.com/Swayamgoel" target="_blank" class="s-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/swayam-goel-176712242/" target="_blank" class="s-btn"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+                    <a href="https://www.behance.net/swayamgoel" target="_blank" class="s-btn"><i class="fa-brands fa-behance"></i> Behance</a>
+                </div>
+            </div>
+        </div>
+        <div class="foot-bar">
+            <p>© 2026 Swayam Goel — All Rights Reserved</p>
+            <div class="foot-m">Design. Develop. Grow.</div>
+            <p>Crafted with care ✦ India</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            document.getElementById('mob').classList.toggle('on');
+            document.getElementById('ham').classList.toggle('x');
+            document.body.style.overflow = document.getElementById('mob').classList.contains('on') ? 'hidden' : '';
+        }
+        function closeNav() {
+            document.getElementById('mob').classList.remove('on');
+            document.getElementById('ham').classList.remove('x');
+            document.body.style.overflow = '';
+        }
+    </script>
+</body>
+
+</html>
