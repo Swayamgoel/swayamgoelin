@@ -1277,7 +1277,6 @@
             margin-bottom: 40px;
             max-width: 380px;
         }
-
         .c-list {
             display: flex;
             flex-direction: column;
@@ -1370,6 +1369,16 @@
             letter-spacing: .12em;
             text-transform: uppercase;
             color: var(--mid);
+        }
+
+        .foot-bar p a {
+            color: var(--gold);
+            text-decoration: none;
+            transition: color .2s;
+        }
+
+        .foot-bar p a:hover {
+            color: var(--gold-l);
         }
 
         .foot-m {
